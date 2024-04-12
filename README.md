@@ -42,10 +42,10 @@ Port OEM ROMs to project treble using github actions and [ErfanGSIs](https://git
 
 > In order to connect to source forge you need some extra configuration variables in your repo secrets. See [here](https://docs.github.com/en/actions/reference/encrypted-secrets).
 
-**ofaaa008** | **Description**
+**Name** | **Description**
 :-----:|:-----:
-USERNAME | ofaaa008
-PASSWORD | 147896325dadada
+USERNAME | SourceForge username.
+PASSWORD | SourceForge password.
 TG_BOT_TOKEN | Telegram Bot Token to send notification messages to. Used only if telegram notifications are enabled.
 
 # Donate
