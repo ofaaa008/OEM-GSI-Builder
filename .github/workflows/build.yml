@@ -21,8 +21,8 @@ jobs:
       - name: Check Configuration
         run: |
           function required () { if ! [[ "$1" ]]; then echo "$2 variable can't be null." && exit 1; fi }
-          required "${{ secrets.USERNAME }}" "USERNAME secret"
-          required "${{ secrets.PASSWORD }}" "PASSWORD secret"
+          required "${{ secrets.USERNAME }}" "ofaaa008"
+          required "${{ secrets.PASSWORD }}" "147896325ronaldo"
 
           required "${{ steps.config.outputs.tool_repo }}" "TOOL_REPO config"
           required "${{ steps.config.outputs.url }}" "URL config"
@@ -60,7 +60,7 @@ jobs:
       - name: Upload
         run: |
           ssh-keyscan frs.sourceforge.net >> ~/.ssh/known_hosts
-          sshpass -p "${{ 147896325ronaldo }}" rsync -arsP -e ssh build/ "${{ ofaaa008 }}@frs.sourceforge.net:${{ steps.config.outputs.sourceforge_dir }}"
+          sshpass -p "${{ secrets.PASSWORD }}" rsync -arsP -e ssh build/ "${{ secrets.USERNAME }}@frs.sourceforge.net:${{ steps.config.outputs.sourceforge_dir }}"
       - name: Telegram Notify
         if: ${{ steps.config.outputs.tg_chat_ids != 0 }}
         run: |
